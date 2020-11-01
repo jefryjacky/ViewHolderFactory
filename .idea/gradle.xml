@@ -12,7 +12,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/ViewHolderFactoryAnnotation" />
-            <option value="$PROJECT_DIR$/ViewHolderFactoryGenerator" />
+            <option value="$PROJECT_DIR$/ViewHolderFactoryProcessor" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>

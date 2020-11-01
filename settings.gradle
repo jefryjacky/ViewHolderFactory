@@ -1,4 +1,4 @@
-include ':ViewHolderFactoryGenerator'
+include ':ViewHolderFactoryProcessor'
 include ':ViewHolderFactoryAnnotation'
 include ':app'
 rootProject.name = "ViewHolderInstance"
