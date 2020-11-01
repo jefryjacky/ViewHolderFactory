@@ -4,7 +4,7 @@ plugins {
     id 'kotlin-kapt'
 }
 
-group = "p.com.viewholderfactory"
+group = "p.com"
 version = "1.0.0"
 
 java {
