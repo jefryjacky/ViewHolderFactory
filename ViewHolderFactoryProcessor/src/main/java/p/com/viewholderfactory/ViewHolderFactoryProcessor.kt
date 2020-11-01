@@ -1,4 +1,4 @@
-package p.com.viewholderinstancegenerator
+package p.com.viewholderfactory
 
 import com.google.auto.service.AutoService
 import com.squareup.kotlinpoet.*
@@ -17,7 +17,7 @@ import javax.tools.Diagnostic
 
 @AutoService(Processor::class)
 @SupportedSourceVersion(SourceVersion.RELEASE_8)
-class ViewHolderInstanceProcessor() :KotlinAbstractProcessor(), KotlinMetadataUtils {
+class ViewHolderFactoryProcessor() :KotlinAbstractProcessor(), KotlinMetadataUtils {
 
     override fun getSupportedAnnotationTypes() = setOf(ANNOTATION.canonicalName)
 
