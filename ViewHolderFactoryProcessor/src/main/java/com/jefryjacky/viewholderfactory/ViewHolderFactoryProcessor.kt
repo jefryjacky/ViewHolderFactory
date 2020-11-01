@@ -1,4 +1,4 @@
-package p.com.viewholderfactory
+package com.jefryjacky.viewholderfactory
 
 import com.google.auto.service.AutoService
 import com.squareup.kotlinpoet.*
