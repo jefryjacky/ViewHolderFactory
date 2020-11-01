@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 class Adapter : ListAdapter<String, ItemViewHolder>(AdapterDiffUtil()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        return ItemViewHolder.create(parent)
+        return ItemViewHolderFactory.create(parent)
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
