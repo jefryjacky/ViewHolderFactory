@@ -3,7 +3,7 @@
 ViewHolderFactoryAnnotation: [ ![Download](https://api.bintray.com/packages/jefryjacky/AndroidLibrary/ViewHolderFactoryAnnotation/images/download.svg) ](https://bintray.com/jefryjacky/AndroidLibrary/ViewHolderFactoryAnnotation/_latestVersion)    
 ViewHolderFactoryProcessor: [ ![Download](https://api.bintray.com/packages/jefryjacky/AndroidLibrary/ViewHolderFactoryProcessor/images/download.svg) ](https://bintray.com/jefryjacky/AndroidLibrary/ViewHolderFactoryProcessor/_latestVersion)   
 
-# ViewHolderFactory
+Auto generate factory for instance RecycleViewAdapter Viewholder
 
 **Gradle**
 ```  
