@@ -1,7 +1,14 @@
 plugins {
     id 'java-library'
     id 'kotlin'
+    id "com.jfrog.bintray" version "1.8.4"
+    id 'maven-publish'
+    id 'java'
+    id 'maven'
 }
+
+group = "com.jefryjacky"
+version = "1.0.0"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -10,4 +17,80 @@ java {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+}
+
+// Create the pom configuration:
+def pomConfig = {
+    licenses {
+        license {
+            name "The Apache Software License, Version 2.0"
+            url "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            distribution "repo"
+        }
+    }
+    developers {
+        developer {
+            id "jefryjacky"
+            name "Jefry Jacky"
+            email "jefryjacky@gmail.com"
+        }
+    }
+
+    scm {
+        url "https://github.com/jefryjacky/ViewHolderFactory"
+    }
+}
+
+def properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+bintray {
+    user = properties.getProperty('bintray.user')
+    key = properties.getProperty('bintray.key')
+    pkg {
+        repo = 'AndroidLibrary'
+        name = 'ViewHolderFactoryAnnotation'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/jefryjacky/ViewHolderFactory.git'
+        version {
+            name = '1.0.0'
+            desc = 'View Holder Factory Annotation'
+            released  = new Date()
+            vcsTag = '1.0.0'
+        }
+    }
+    publications = ['MyPublication']
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+task runBintrayUpload(dependsOn: 'bintrayUpload')
+
+// Create the publication with the pom configuration:
+publishing {
+    publications {
+        MyPublication(MavenPublication) {
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+            groupId 'com.jefryjacky'
+            artifactId 'viewholderfactoryannotation'
+            version '1.0.0'
+            pom.withXml {
+                def root = asNode()
+                root.appendNode('description', 'View Holder Factory Annotation')
+                root.appendNode('name', 'viewholderfactoryannotation')
+                root.appendNode('url', 'https://github.com/jefryjacky/ViewHolderFactory')
+                root.children().last() + pomConfig
+            }
+        }
+    }
 }
