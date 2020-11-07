@@ -1,7 +1,7 @@
 # ViewHolderFactory
 
-[ ![Download ViewHolderFactoryAnnotation](https://api.bintray.com/packages/jefryjacky/AndroidLibrary/ViewHolderFactoryAnnotation/images/download.svg) ](https://bintray.com/jefryjacky/AndroidLibrary/ViewHolderFactoryAnnotation/_latestVersion)
-[ ![Download ViewHolderFactoryProcessor](https://api.bintray.com/packages/jefryjacky/AndroidLibrary/ViewHolderFactoryProcessor/images/download.svg) ](https://bintray.com/jefryjacky/AndroidLibrary/ViewHolderFactoryProcessor/_latestVersion)
+ViewHolderFactoryAnnotation: [ ![Download](https://api.bintray.com/packages/jefryjacky/AndroidLibrary/ViewHolderFactoryAnnotation/images/download.svg) ](https://bintray.com/jefryjacky/AndroidLibrary/ViewHolderFactoryAnnotation/_latestVersion)    
+ViewHolderFactoryProcessor: [ ![Download](https://api.bintray.com/packages/jefryjacky/AndroidLibrary/ViewHolderFactoryProcessor/images/download.svg) ](https://bintray.com/jefryjacky/AndroidLibrary/ViewHolderFactoryProcessor/_latestVersion)   
 
 # ViewHolderFactory
 
