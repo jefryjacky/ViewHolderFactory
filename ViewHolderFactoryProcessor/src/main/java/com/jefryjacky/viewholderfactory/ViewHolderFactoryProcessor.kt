@@ -6,7 +6,7 @@ import me.eugeniomarletti.kotlin.metadata.KotlinClassMetadata
 import me.eugeniomarletti.kotlin.metadata.KotlinMetadataUtils
 import me.eugeniomarletti.kotlin.metadata.kotlinMetadata
 import me.eugeniomarletti.kotlin.processing.KotlinAbstractProcessor
-import p.com.viewholderinstanceannotation.ViewHolderAnnotation
+import com.jefryjacky.viewholderinstanceannotation.ViewHolderAnnotation
 import java.io.File
 import javax.annotation.processing.Processor
 import javax.annotation.processing.RoundEnvironment

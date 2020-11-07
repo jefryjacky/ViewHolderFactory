@@ -1,9 +1,9 @@
-package p.com.viewholderinstance
+package com.jefryjacky.viewholderfactory
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_list.view.*
-import p.com.viewholderinstanceannotation.ViewHolderAnnotation
+import com.jefryjacky.viewholderinstanceannotation.ViewHolderAnnotation
 
 
 @ViewHolderAnnotation("item_list")

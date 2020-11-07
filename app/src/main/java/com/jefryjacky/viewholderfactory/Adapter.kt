@@ -1,4 +1,4 @@
-package p.com.viewholderinstance
+package com.jefryjacky.viewholderfactory
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil

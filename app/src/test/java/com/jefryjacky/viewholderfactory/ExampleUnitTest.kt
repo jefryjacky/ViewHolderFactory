@@ -1,4 +1,4 @@
-package p.com.viewholderinstance
+package com.jefryjacky.viewholderfactory
 
 import org.junit.Test
 

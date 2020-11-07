@@ -1,4 +1,4 @@
-package p.com.viewholderinstanceannotation
+package com.jefryjacky.viewholderinstanceannotation
 
 
 @Target(AnnotationTarget.CLASS)

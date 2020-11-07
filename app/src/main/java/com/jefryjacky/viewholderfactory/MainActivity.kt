@@ -1,8 +1,9 @@
-package p.com.viewholderinstance
+package com.jefryjacky.viewholderfactory
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
+import p.com.viewholderinstance.R
 
 class MainActivity : AppCompatActivity() {
 
