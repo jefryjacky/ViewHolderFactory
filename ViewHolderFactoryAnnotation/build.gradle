@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "com.jefryjacky"
-version = "1.0.0"
+version = "1.0.1"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -53,10 +53,10 @@ bintray {
         licenses = ['Apache-2.0']
         vcsUrl = 'https://github.com/jefryjacky/ViewHolderFactory.git'
         version {
-            name = '1.0.0'
+            name = '1.0.1'
             desc = 'View Holder Factory Annotation'
             released  = new Date()
-            vcsTag = '1.0.0'
+            vcsTag = '1.0.1'
         }
     }
     publications = ['MyPublication']
@@ -72,18 +72,18 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
     from javadoc.destinationDir
 }
 
-task runBintrayUpload(dependsOn: 'bintrayUpload')
+task runViewHolderFactoryAnnotationBintrayUpload(dependsOn: 'bintrayUpload')
 
 // Create the publication with the pom configuration:
 publishing {
     publications {
         MyPublication(MavenPublication) {
             from components.java
-            artifact sourcesJar
-            artifact javadocJar
+//            artifact sourcesJar
+//            artifact javadocJar
             groupId 'com.jefryjacky'
             artifactId 'viewholderfactoryannotation'
-            version '1.0.0'
+            version '1.0.1'
             pom.withXml {
                 def root = asNode()
                 root.appendNode('description', 'View Holder Factory Annotation')

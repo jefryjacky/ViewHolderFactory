@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "com.jefryjacky"
-version = "1.0.0"
+version = "1.0.1"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -58,20 +58,20 @@ properties.load(project.rootProject.file('local.properties').newDataInputStream(
 bintray {
     user = properties.getProperty('bintray.user')
     key = properties.getProperty('bintray.key')
-    filesSpec {
-        from 'build/libs'
-        into '.'
-    }
+//    filesSpec {
+//        from 'build/libs'
+//        into '.'
+//    }
     pkg {
         repo = 'AndroidLibrary'
         name = 'ViewHolderFactoryProcessor'
         licenses = ['Apache-2.0']
         vcsUrl = 'https://github.com/jefryjacky/ViewHolderFactory.git'
         version {
-            name = '1.0.0'
+            name = '1.0.1'
             desc = 'View Holder Factory Processor'
             released  = new Date()
-            vcsTag = '1.0.0'
+            vcsTag = '1.0.1'
         }
     }
     publications = ['MyPublication']
@@ -92,11 +92,11 @@ publishing {
     publications {
         MyPublication(MavenPublication) {
             from components.java
-            artifact sourcesJar
-            artifact javadocJar
+//            artifact sourcesJar
+//            artifact javadocJar
             groupId 'com.jefryjacky'
             artifactId 'viewholderfactoryprocessor'
-            version '1.0.0'
+            version '1.0.1'
             pom.withXml {
                 def root = asNode()
                 root.appendNode('description', 'View Holder Factory Processor')
@@ -107,3 +107,5 @@ publishing {
         }
     }
 }
+
+task runViewHolderFactoryProcessorBintrayUpload(dependsOn: 'bintrayUpload')
