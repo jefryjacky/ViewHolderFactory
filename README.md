@@ -15,7 +15,7 @@ dependencies {
 ```  
 
 # Usage
-1. Add ViewHolderFactoryAnnotation with layoutname about your view holder class
+1. Add ViewHolderFactoryAnnotation with layoutname above your view holder class
 ```kotlin
 @ViewHolderAnnotation("item_list")
 class ItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
